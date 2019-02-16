@@ -10,6 +10,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href="css.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+  <link href="gallery-grid.css" rel="stylesheet" type="text/css">
 
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -33,9 +35,9 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">OUR JEWELRY
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Earrings</a></li>
-            <li><a href="#">Rings</a></li>
-            <li><a href="#">Media</a></li> 
+            <li><a href="#earrings">Earrings</a></li>
+            <li><a href="#rings">Rings</a></li>
+            <li><a href="#necklaces">Necklaces</a></li> 
           </ul>
         </li>
         <li><a href="#band">BAND</a></li>
@@ -96,46 +98,54 @@
     </a>
 </div>
 
-<!-- Container (The Band Section) -->
-<div id="band" class="container text-center">
-  <h3>THE BAND</h3>
-  <p><em>We love music!</em></p>
-  <p>We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo" class="collapse">
-        <p>Guitarist and Lead Vocalist</p>
-        <p>Loves long walks on the beach</p>
-        <p>Member since 1988</p>
+<!-- Container (OUR JEWELRY Section) -->
+<div id="our_jewelery" class="container text-center gallery-container">
+  <h3>OUR JEWELRY</h3>
+  <div class="tz-gallery">
+    <div class="row">
+      <div class="col-md-4">
+        <p class="text-center"><strong>Earrings</strong></p><br>
+        <a class="lightbox" href="./images/Earrings/Earrings03.jpeg">
+          <img src="./images/Earrings/Earrings03.jpeg" alt="Bridge" width="200px" height="250px">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <p class="text-center"><strong>Rings</strong></p><br>
+        <a class="lightbox" href="./images/Rings/Ring01.jpeg">
+          <img src="./images//Rings/Ring01.jpeg" alt="Bridge" width="200px" height="250px">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <p class="text-center"><strong>Necklaces</strong></p><br>
+        <a class="lightbox" href="./images/Earrings/Earrings01.jpeg">
+          <img src="./images/Earrings/Earrings01.jpeg" alt="Bridge" width="200px" height="250px">
+        </a>
       </div>
     </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-        <img src="bandmember.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
-      </a>
-      <div id="demo3" class="collapse">
-        <p>Bass player</p>
-        <p>Loves math</p>
-        <p>Member since 2005</p>
-      </div>
-    </div>
+  </div>
+</div>
+
+<!-- Container (Earrings Section) -->
+<div id="earrings" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Earrings</h3>
+
+  </div>
+</div>
+
+<!-- Container (Rings Section) -->
+<div id="rings">
+  <div class="container">
+    <h3 class="text-center">Rings</h3>
+
+  </div>
+</div>
+
+<!-- Container (Necklaces Section) -->
+<div id="necklaces" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">Necklaces</h3>
+
   </div>
 </div>
 
@@ -306,6 +316,11 @@ $(document).ready(function(){
     } // End if
   });
 })
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
 </script>
 
 </body>
